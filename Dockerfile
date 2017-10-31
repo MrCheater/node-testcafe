@@ -1,10 +1,10 @@
 FROM mhart/alpine-node:latest
 
-ADD ./prepare-chromium.start /
-RUN chmod +x /prepare-chromium.start
+ADD ./prepare-chromium.sh /
+RUN chmod +x /prepare-chromium.sh
 
-ADD ./chromium-browser /
-RUN chmod +x /chromium-browser
+ADD ./chromium /
+RUN chmod +x /chromium
 
 RUN apk --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ add chromium xwininfo xvfb dbus eudev ttf-freefont fluxbox
 

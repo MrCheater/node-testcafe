@@ -1,5 +1,7 @@
 FROM mhart/alpine-node:latest
 
+RUN apk add --no-cache add git
+
 ADD ./prepare-chromium.sh /
 RUN chmod +x /prepare-chromium.sh
 

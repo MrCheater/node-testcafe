@@ -8,6 +8,6 @@ RUN chmod +x /chromium
 
 RUN apk --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ add chromium xwininfo xvfb dbus eudev ttf-freefont fluxbox
 
-RUN npm install -g lerna testcafe next-lerna-version
+RUN npm install -g testcafe next-lerna-version
 
 CMD /prepare-chromium.sh
